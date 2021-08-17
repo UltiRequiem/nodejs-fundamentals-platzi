@@ -10,10 +10,11 @@ using v8::Object;
 using v8::String;
 using v8::Value;
 
-void Method(const FunctionCallbackInfo<Value>& args) {
-  Isolate* isolate = args.GetIsolate();
-  args.GetReturnValue().Set(String::NewFromUtf8(
-      isolate, "World", NewStringType::kNormal).ToLocalChecked());
+void Method(const FunctionCallbackInfo<Value> &args) {
+  Isolate *isolate = args.GetIsolate();
+  args.GetReturnValue().Set(
+      String::NewFromUtf8(isolate, "World", NewStringType::kNormal)
+          .ToLocalChecked());
 }
 
 void Initialize(Local<Object> exports) {
@@ -22,4 +23,4 @@ void Initialize(Local<Object> exports) {
 
 NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize)
 
-} 
+} // namespace demo
