@@ -24,6 +24,6 @@
     "prettier-plugin-jsdoc": "^0.3.23"
   },
   "dependencies": {
-    "electron": "^15.5.5"
+    "electron": "^18.3.7"
   }
 }
